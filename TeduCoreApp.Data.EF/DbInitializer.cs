@@ -107,7 +107,6 @@ namespace TeduCoreApp.Data.EF
                 _context.Colors.AddRange(listColor);
                 _context.SaveChanges();
             }
-           
 
             if (_context.Slides.Count() == 0)
             {
