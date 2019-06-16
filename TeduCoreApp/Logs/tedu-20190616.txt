@@ -1,0 +1,1709 @@
+2019-06-16T12:52:44.0702027+07:00 0HLNI3RCT94SA:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T12:52:44.0702027+07:00 0HLNI3RCT94SB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T12:52:44.3942212+07:00 0HLNI3RCT94SA:00000001 [INF] Request finished in 329.9887ms 200  (791a596a)
+2019-06-16T12:52:44.6972386+07:00 0HLNI3RCT94SB:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T12:52:44.7792433+07:00 0HLNI3RCT94SB:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T12:52:44.8592478+07:00 0HLNI3RCT94SB:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T12:52:45.6282918+07:00 0HLNI3RCT94SB:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T12:52:45.7702999+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("53"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:52:45.8463043+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:52:45.8673055+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:52:45.9183084+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("31"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T12:52:46.0433156+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("88"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T12:52:46.0733173+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T12:52:46.1453214+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("46"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:52:46.4083364+07:00 0HLNI3RCT94SB:00000001 [INF] Executed DbCommand ("67"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T12:53:04.8193895+07:00 0HLNI3RCT94SB:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 20027.9496ms (afa2e885)
+2019-06-16T12:53:04.8253898+07:00 0HLNI3RCT94SB:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T12:53:04.8533914+07:00 0HLNI3RCT94SB:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T12:53:07.4608463+07:00 0HLNI3RCT94SA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44356/favicon.ico   (ca22a1cb)
+2019-06-16T12:53:07.4764463+07:00 0HLNI3RCT94SB:00000001 [INF] Request finished in 23399.6856ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T12:53:07.7104467+07:00 0HLNI3RCT94SA:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2019-06-16T12:53:07.7104467+07:00 0HLNI3RCT94SA:00000002 [INF] Request finished in 279.2516ms 200 image/x-icon (791a596a)
+2019-06-16T12:57:53.0471719+07:00 0HLNI3U90VTLO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T12:57:53.0471719+07:00 0HLNI3U90VTLN:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T12:57:53.1981806+07:00 0HLNI3U90VTLN:00000001 [INF] Request finished in 159.5048ms 200  (791a596a)
+2019-06-16T12:57:53.3771908+07:00 0HLNI3U90VTLO:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T12:57:53.4441947+07:00 0HLNI3U90VTLO:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T12:57:53.5051981+07:00 0HLNI3U90VTLO:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T12:57:53.5301996+07:00 0HLNI3U90VTLO:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T12:57:53.6002036+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:57:53.6632072+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:57:53.6872086+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:57:53.7102099+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T12:57:53.7412116+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T12:57:53.7602127+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T12:57:53.7782138+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T12:57:53.9052210+07:00 0HLNI3U90VTLO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T12:57:59.2775283+07:00 0HLNI3U90VTLO:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 5815.4751ms (afa2e885)
+2019-06-16T12:57:59.2835286+07:00 0HLNI3U90VTLO:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T12:57:59.3495324+07:00 0HLNI3U90VTLO:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T12:57:59.6895519+07:00 0HLNI3U90VTLO:00000001 [INF] Request finished in 6641.403ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:00:19.6087249+07:00 0HLNI3VKMN8JH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:00:19.6077249+07:00 0HLNI3VKMN8JI:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:00:19.7477329+07:00 0HLNI3VKMN8JI:00000001 [INF] Request finished in 154.1005ms 200  (791a596a)
+2019-06-16T13:00:19.9337435+07:00 0HLNI3VKMN8JH:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:00:19.9897467+07:00 0HLNI3VKMN8JH:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:00:20.0757516+07:00 0HLNI3VKMN8JH:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:00:20.0957528+07:00 0HLNI3VKMN8JH:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:00:20.1687569+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:00:20.2357608+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:00:20.2547619+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:00:20.2727629+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:00:20.3007645+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:00:20.3227658+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:00:20.3397667+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:00:20.4877752+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:00:44.8291674+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 24821.8368ms (afa2e885)
+2019-06-16T13:00:44.8371679+07:00 0HLNI3VKMN8JH:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:00:44.8671696+07:00 0HLNI3VKMN8JH:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:00:45.1091835+07:00 0HLNI3VKMN8JH:00000001 [INF] Request finished in 25523.5171ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:01:09.8394410+07:00 0HLNI403LQT2F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:01:09.8394410+07:00 0HLNI403LQT2G:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:01:09.9924497+07:00 0HLNI403LQT2G:00000001 [INF] Request finished in 161.4303ms 200  (791a596a)
+2019-06-16T13:01:10.2164625+07:00 0HLNI403LQT2F:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:01:10.2754659+07:00 0HLNI403LQT2F:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:01:10.3314691+07:00 0HLNI403LQT2F:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:01:10.3754716+07:00 0HLNI403LQT2F:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:01:10.4514760+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:10.5144796+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:10.5434812+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:10.5754831+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:01:10.6234858+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:01:10.6554876+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:01:10.6854894+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:10.8895010+07:00 0HLNI403LQT2F:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:01:13.0266233+07:00 0HLNI403LQT2F:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 2743.868ms (afa2e885)
+2019-06-16T13:01:13.0326236+07:00 0HLNI403LQT2F:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:01:13.0656255+07:00 0HLNI403LQT2F:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:01:13.3366410+07:00 0HLNI403LQT2F:00000001 [INF] Request finished in 3513.4557ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:01:53.8175090+07:00 0HLNI40GP6NAL:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:01:53.8175090+07:00 0HLNI40GP6NAM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:01:53.9975193+07:00 0HLNI40GP6NAL:00000001 [INF] Request finished in 187.7448ms 200  (791a596a)
+2019-06-16T13:01:54.1705292+07:00 0HLNI40GP6NAM:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:01:54.2255323+07:00 0HLNI40GP6NAM:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:01:54.2805355+07:00 0HLNI40GP6NAM:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:01:54.3165376+07:00 0HLNI40GP6NAM:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:01:54.3925419+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:54.4555455+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:54.4775468+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:54.4975479+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:01:54.5375502+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:01:54.5605515+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:01:54.5805527+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:01:54.7415619+07:00 0HLNI40GP6NAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:02:00.7349047+07:00 0HLNI40GP6NAM:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 6477.037ms (afa2e885)
+2019-06-16T13:02:00.7499055+07:00 0HLNI40GP6NAM:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:02:00.7899078+07:00 0HLNI40GP6NAM:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:02:01.0059202+07:00 0HLNI40GP6NAM:00000001 [INF] Request finished in 7205.7827ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:03:23.0616773+07:00 0HLNI41BC1KN9:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:03:23.0616773+07:00 0HLNI41BC1KN8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:03:23.2236865+07:00 0HLNI41BC1KN9:00000001 [INF] Request finished in 160.4964ms 200  (791a596a)
+2019-06-16T13:03:23.3816956+07:00 0HLNI41BC1KN8:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:03:23.4476993+07:00 0HLNI41BC1KN8:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:03:23.5097029+07:00 0HLNI41BC1KN8:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:03:23.5327042+07:00 0HLNI41BC1KN8:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:03:23.6137088+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:03:23.6777125+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:03:23.6967136+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:03:23.7157147+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:03:23.7437163+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:03:23.7647175+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:03:23.7817184+07:00 0HLNI41BC1KN8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:04:18.5361737+07:00 0HLNI41RT5RO1:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:04:18.5361737+07:00 0HLNI41RT5RO2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:04:18.6741816+07:00 0HLNI41RT5RO1:00000001 [INF] Request finished in 147.439ms 200  (791a596a)
+2019-06-16T13:04:18.8441913+07:00 0HLNI41RT5RO2:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:04:18.9121952+07:00 0HLNI41RT5RO2:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:04:18.9721986+07:00 0HLNI41RT5RO2:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:04:18.9992001+07:00 0HLNI41RT5RO2:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:04:19.1982115+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:04:19.2652154+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:04:19.2902168+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:04:19.3112180+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:04:19.3402197+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:04:19.3602208+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:04:19.3922226+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:04:19.5502317+07:00 0HLNI41RT5RO2:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:04:29.4627986+07:00 0HLNI41RT5RO2:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 10536.8627ms (afa2e885)
+2019-06-16T13:04:29.4767994+07:00 0HLNI41RT5RO2:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:04:29.5238021+07:00 0HLNI41RT5RO2:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:04:33.8696665+07:00 0HLNI41RT5RO2:00000001 [INF] Request finished in 15351.4039ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:07:59.7071255+07:00 0HLNI43TQBNUR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:07:59.7071255+07:00 0HLNI43TQBNUS:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:07:59.8501337+07:00 0HLNI43TQBNUS:00000001 [INF] Request finished in 154.4841ms 200  (791a596a)
+2019-06-16T13:08:00.0311441+07:00 0HLNI43TQBNUR:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:08:00.0871473+07:00 0HLNI43TQBNUR:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:08:00.1921533+07:00 0HLNI43TQBNUR:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:08:00.2311555+07:00 0HLNI43TQBNUR:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:08:00.3721636+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:08:00.4431676+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:08:00.4651689+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:08:00.4831699+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:08:00.5101715+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:08:00.5321727+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:08:00.5571741+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:08:00.6771810+07:00 0HLNI43TQBNUR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:08:37.0792631+07:00 0HLNI43TQBNUR:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 36972.9474ms (afa2e885)
+2019-06-16T13:08:37.0892637+07:00 0HLNI43TQBNUR:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:08:37.1582676+07:00 0HLNI43TQBNUR:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:08:37.3642794+07:00 0HLNI43TQBNUR:00000001 [INF] Request finished in 37673.4911ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:09:59.7179897+07:00 0HLNI451IDQ1K:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:09:59.7179897+07:00 0HLNI451IDQ1J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:09:59.8559976+07:00 0HLNI451IDQ1K:00000001 [INF] Request finished in 180.3303ms 200  (791a596a)
+2019-06-16T13:10:00.0370080+07:00 0HLNI451IDQ1J:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:10:00.0920111+07:00 0HLNI451IDQ1J:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:10:00.1500145+07:00 0HLNI451IDQ1J:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:10:00.1720157+07:00 0HLNI451IDQ1J:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:10:00.2560205+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:10:00.3350250+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:10:00.3540261+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:10:00.3720272+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:10:00.4000288+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:10:00.4240301+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:10:00.4410311+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:10:00.5830392+07:00 0HLNI451IDQ1J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:13:12.1161882+07:00 0HLNI46QTJOGO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:13:12.1161882+07:00 0HLNI46QTJOGP:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:13:12.2641967+07:00 0HLNI46QTJOGP:00000001 [INF] Request finished in 157.5565ms 200  (791a596a)
+2019-06-16T13:13:12.4592079+07:00 0HLNI46QTJOGO:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:13:12.5232115+07:00 0HLNI46QTJOGO:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:13:12.5982158+07:00 0HLNI46QTJOGO:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:13:12.6342179+07:00 0HLNI46QTJOGO:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:13:12.7122223+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:13:12.7802262+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:13:12.8032275+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:13:12.8252288+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:13:12.8542305+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:13:12.8742316+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:13:12.8912326+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:13:13.0602422+07:00 0HLNI46QTJOGO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:16:33.2316914+07:00 0HLNI48MSDJ01:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:16:33.2316914+07:00 0HLNI48MSDJ02:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:16:33.5097073+07:00 0HLNI48MSDJ01:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:16:33.5097073+07:00 0HLNI48MSDJ02:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:16:33.5627103+07:00 0HLNI48MSDJ01:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:16:33.5627103+07:00 0HLNI48MSDJ02:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:16:33.6167134+07:00 0HLNI48MSDJ01:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:16:33.6167134+07:00 0HLNI48MSDJ02:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:16:33.6257139+07:00 0HLNI48MSDJ01:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:16:33.6257139+07:00 0HLNI48MSDJ02:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:16:33.6937178+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.6937178+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.7507211+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.7547213+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.7667220+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.7667220+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.7827229+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:16:33.7827229+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:16:33.8077243+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:16:33.8087244+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:16:33.8207251+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:16:33.8207251+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:16:33.8357259+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.8367260+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:16:33.9557328+07:00 0HLNI48MSDJ02:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:16:33.9567329+07:00 0HLNI48MSDJ01:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:16:33.9677335+07:00 0HLNI48MSDJ02:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 399.6091ms (afa2e885)
+2019-06-16T13:16:33.9677335+07:00 0HLNI48MSDJ01:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 399.5971ms (afa2e885)
+2019-06-16T13:16:33.9687335+07:00 0HLNI48MSDJ02:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:16:33.9687335+07:00 0HLNI48MSDJ01:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:16:33.9827343+07:00 0HLNI48MSDJ01:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:16:33.9827343+07:00 0HLNI48MSDJ02:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:16:34.2177478+07:00 0HLNI48MSDJ01:00000001 [INF] Request finished in 996.8492ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:16:34.2177478+07:00 0HLNI48MSDJ02:00000001 [INF] Request finished in 996.8437ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:31:09.9274154+07:00 0HLNI4GS4N3H9:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:31:09.9274154+07:00 0HLNI4GS4N3HA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:31:10.0634232+07:00 0HLNI4GS4N3H9:00000001 [INF] Request finished in 143.3587ms 200  (791a596a)
+2019-06-16T13:31:10.2994367+07:00 0HLNI4GS4N3HA:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:31:10.3684406+07:00 0HLNI4GS4N3HA:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:31:10.4514454+07:00 0HLNI4GS4N3HA:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:31:10.4804470+07:00 0HLNI4GS4N3HA:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:31:10.5654519+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:10.6384561+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:10.6644576+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:10.6844587+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:31:10.7174606+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:10.7384618+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:10.7604631+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:10.8964708+07:00 0HLNI4GS4N3HA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:31:51.8447159+07:00 0HLNI4H8KQDNK:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:31:51.8447159+07:00 0HLNI4H8KQDNL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:31:52.0943163+07:00 0HLNI4H8KQDNK:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:31:52.0943163+07:00 0HLNI4H8KQDNL:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:31:52.1411164+07:00 0HLNI4H8KQDNL:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:31:52.1411164+07:00 0HLNI4H8KQDNK:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:31:52.1879165+07:00 0HLNI4H8KQDNK:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:31:52.1879165+07:00 0HLNI4H8KQDNL:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:31:52.1879165+07:00 0HLNI4H8KQDNL:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:31:52.2035165+07:00 0HLNI4H8KQDNK:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:31:52.2503166+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.2503166+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.2971166+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.2971166+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.3127167+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.3127167+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.3283167+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:31:52.3283167+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:31:52.3595168+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:52.3595168+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:52.3595168+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:52.3595168+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:31:52.3751168+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.3751168+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:31:52.4843170+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:31:52.4843170+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:31:52.4999170+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 344.4175ms (afa2e885)
+2019-06-16T13:31:52.4999170+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 344.4466ms (afa2e885)
+2019-06-16T13:31:52.4999170+07:00 0HLNI4H8KQDNK:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:31:52.4999170+07:00 0HLNI4H8KQDNL:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:31:52.5155170+07:00 0HLNI4H8KQDNL:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:31:52.5155170+07:00 0HLNI4H8KQDNK:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:31:52.7027174+07:00 0HLNI4H8KQDNK:00000001 [INF] Request finished in 866.3212ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:31:52.7027174+07:00 0HLNI4H8KQDNL:00000001 [INF] Request finished in 861.7547ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:33:08.5221960+07:00 0HLNI4H8KQDNM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:33:08.5261962+07:00 0HLNI4H8KQDNM:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:33:08.5331966+07:00 0HLNI4H8KQDNM:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:33:08.5451973+07:00 0HLNI4H8KQDNM:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:33:08.5571980+07:00 0HLNI4H8KQDNM:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:33:08.5661985+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:33:08.5691987+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:33:08.5811994+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:33:08.5901999+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:33:08.5932001+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:33:08.5982004+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:33:08.6012005+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:33:08.6092010+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:33:18.4347630+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 9899.242ms (afa2e885)
+2019-06-16T13:33:18.4457636+07:00 0HLNI4H8KQDNM:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:33:18.4657648+07:00 0HLNI4H8KQDNM:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:33:18.4837658+07:00 0HLNI4H8KQDNM:00000001 [INF] Request finished in 9958.1945ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:35:35.2053737+07:00 0HLNI4JB786R9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:35:35.2053737+07:00 0HLNI4JB786R7:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:35:35.2053737+07:00 0HLNI4JB786R8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:35:35.4549741+07:00 0HLNI4JB786R9:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:35:35.4549741+07:00 0HLNI4JB786R7:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:35:35.4549741+07:00 0HLNI4JB786R8:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:35:35.5017742+07:00 0HLNI4JB786R9:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:35:35.5017742+07:00 0HLNI4JB786R8:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:35:35.5017742+07:00 0HLNI4JB786R7:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:35:35.5485743+07:00 0HLNI4JB786R8:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:35:35.5485743+07:00 0HLNI4JB786R9:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:35:35.5641743+07:00 0HLNI4JB786R7:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:35:35.5641743+07:00 0HLNI4JB786R9:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:35:35.5953744+07:00 0HLNI4JB786R7:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:35:35.5953744+07:00 0HLNI4JB786R8:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:35:35.6421745+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.6421745+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.6421745+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.6889745+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.6889745+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.6889745+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7201746+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7201746+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7201746+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7357746+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:35:35.7357746+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:35:35.7357746+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:35:35.7669747+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7669747+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7669747+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7825747+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7825747+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7825747+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:35:35.7981747+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7981747+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.7981747+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:35:35.9073749+07:00 0HLNI4JB786R7:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:35:35.9073749+07:00 0HLNI4JB786R9:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:35:35.9073749+07:00 0HLNI4JB786R8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R8:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 405.6274ms (afa2e885)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R7:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 405.618ms (afa2e885)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R9:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 405.6492ms (afa2e885)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R9:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R7:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:35:35.9229750+07:00 0HLNI4JB786R8:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:35:35.9385750+07:00 0HLNI4JB786R7:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:35:35.9385750+07:00 0HLNI4JB786R8:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:35:35.9385750+07:00 0HLNI4JB786R9:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:35:36.1413753+07:00 0HLNI4JB786R8:00000001 [INF] Request finished in 933.9284ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:35:36.1413753+07:00 0HLNI4JB786R7:00000001 [INF] Request finished in 933.901ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:35:36.1413753+07:00 0HLNI4JB786R9:00000001 [INF] Request finished in 933.8946ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:36:26.1841859+07:00 0HLNI4JB786RA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:36:26.1911863+07:00 0HLNI4JB786RA:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:36:26.1981867+07:00 0HLNI4JB786RA:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:36:26.2001868+07:00 0HLNI4JB786RA:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:36:26.2041871+07:00 0HLNI4JB786RA:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:36:26.2091874+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:36:26.2181879+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:36:26.2241882+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:36:26.2291885+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:36:26.2331887+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:36:26.2371890+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:36:26.2411892+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:36:26.2461895+07:00 0HLNI4JB786RA:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:37:10.6242774+07:00 0HLNI4K7L7O2J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:37:10.6242774+07:00 0HLNI4K7L7O2K:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:37:10.8738778+07:00 0HLNI4K7L7O2K:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:37:10.8738778+07:00 0HLNI4K7L7O2J:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:37:10.9206779+07:00 0HLNI4K7L7O2K:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:37:10.9206779+07:00 0HLNI4K7L7O2J:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:37:10.9674780+07:00 0HLNI4K7L7O2K:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:37:10.9674780+07:00 0HLNI4K7L7O2J:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:37:10.9830780+07:00 0HLNI4K7L7O2K:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:37:10.9830780+07:00 0HLNI4K7L7O2J:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:37:11.1390783+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.1390783+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.1858784+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.1858784+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.2014784+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.2014784+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.2170784+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:37:11.2170784+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:37:11.2482785+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:37:11.2482785+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:37:11.2638785+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:37:11.2638785+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:37:11.2794785+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.2794785+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:37:11.3886787+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:37:11.3886787+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:37:11.4042787+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 477.8246ms (afa2e885)
+2019-06-16T13:37:11.4042787+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 477.8281ms (afa2e885)
+2019-06-16T13:37:11.4042787+07:00 0HLNI4K7L7O2K:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:37:11.4042787+07:00 0HLNI4K7L7O2J:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:37:11.4354788+07:00 0HLNI4K7L7O2K:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:37:11.4354788+07:00 0HLNI4K7L7O2J:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TeduCoreApp.Controllers.HomeController.Index() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Controllers\HomeController.cs:line 44
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:37:11.6226791+07:00 0HLNI4K7L7O2J:00000001 [INF] Request finished in 1009.7659ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:37:11.6226791+07:00 0HLNI4K7L7O2K:00000001 [INF] Request finished in 1009.7612ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T13:46:29.4169183+07:00 0HLNI4PE4M6QK:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T13:46:29.4229186+07:00 0HLNI4PE4M6QL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T13:46:29.6889338+07:00 0HLNI4PE4M6QK:00000001 [INF] Request finished in 262.6206ms 200  (791a596a)
+2019-06-16T13:46:29.9649496+07:00 0HLNI4PE4M6QL:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T13:46:30.0339536+07:00 0HLNI4PE4M6QL:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T13:46:30.1199585+07:00 0HLNI4PE4M6QL:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T13:46:30.1549605+07:00 0HLNI4PE4M6QL:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T13:46:30.2409654+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:46:30.3539719+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("15"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:46:30.3989744+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:46:30.4209757+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T13:46:30.4959800+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("28"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:46:30.5199813+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T13:46:30.5609837+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("13"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T13:46:30.6859908+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:46:30.7809963+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:46:30.7949971+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T13:46:30.8119981+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 681.0245ms. (50a9e262)
+2019-06-16T13:46:30.9920083+07:00 0HLNI4PE4M6QL:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-06-16T13:46:31.3430284+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 1301.3459ms (afa2e885)
+2019-06-16T13:46:31.3460286+07:00 0HLNI4PE4M6QL:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T13:46:31.4280333+07:00 0HLNI4PE4M6QL:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Views\Home\Index.cshtml:line 47
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T13:46:31.6770475+07:00 0HLNI4PE4M6QL:00000001 [INF] Request finished in 2302.9328ms 500 text/html; charset=utf-8 (791a596a)
+2019-06-16T14:05:11.7869602+07:00 0HLNI53SLA4FS:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50638/  0 (ca22a1cb)
+2019-06-16T14:05:11.7869602+07:00 0HLNI53SLA4FR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44356/   (ca22a1cb)
+2019-06-16T14:05:11.9359687+07:00 0HLNI53SLA4FS:00000001 [INF] Request finished in 154.7526ms 200  (791a596a)
+2019-06-16T14:05:12.1159790+07:00 0HLNI53SLA4FR:00000001 [INF] Executing endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (500cc934)
+2019-06-16T14:05:12.1739823+07:00 0HLNI53SLA4FR:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" (a44c0341)
+2019-06-16T14:05:12.2449864+07:00 0HLNI53SLA4FR:00000001 [INF] Executing action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" - Validation state: Valid (dad538d7)
+2019-06-16T14:05:12.2709879+07:00 0HLNI53SLA4FR:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"AppDbContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2019-06-16T14:05:12.5110016+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("40"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`HotFlag` = TRUE) AND (`x`.`Status` = 1)
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T14:05:12.5820057+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T14:05:12.7310142+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`CategoryId`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Name`, `x`.`OriginalPrice`, `x`.`Price`, `x`.`PromotionPrice`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tag`, `x`.`ThumbnailImage`, `x`.`Unit`, `x`.`ViewCount`
+FROM `Products` AS `x`
+WHERE (`x`.`Status` = 1) AND `x`.`PromotionPrice` IS NOT NULL
+ORDER BY `x`.`DateModified` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T14:05:12.7500153+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ortherPageHome_0='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`Description`, `x`.`DisplayOrder`, `x`.`Image`, `x`.`Name`, `x`.`OrtherPageHome`, `x`.`Status`, `x`.`Url`
+FROM `Slides` AS `x`
+WHERE (`x`.`OrtherPageHome` = @__ortherPageHome_0) AND (`x`.`Status` = TRUE)
+ORDER BY `x`.`DisplayOrder`" (0723d8ff)
+2019-06-16T14:05:12.7970180+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T14:05:12.8190192+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__pageId_0='?' (Size = 20), @__positonId_1='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`Image`, `x`.`Name`, `x`.`PageId`, `x`.`PositionId`, `x`.`SortOrder`, `x`.`Status`, `x`.`Url`
+FROM `Advertistments` AS `x`
+WHERE ((`x`.`PageId` = @__pageId_0) AND (`x`.`Status` = 1)) AND (`x`.`PositionId` = @__positonId_1)
+ORDER BY `x`.`SortOrder`" (0723d8ff)
+2019-06-16T14:05:12.8370203+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Content`, `x`.`DateCreated`, `x`.`DateModified`, `x`.`Description`, `x`.`HomeFlag`, `x`.`HotFlag`, `x`.`Image`, `x`.`Name`, `x`.`SeoAlias`, `x`.`SeoDescription`, `x`.`SeoKeywords`, `x`.`SeoPageTitle`, `x`.`Status`, `x`.`Tags`, `x`.`ViewCount`
+FROM `Blogs` AS `x`
+WHERE `x`.`Status` = 1
+ORDER BY `x`.`DateCreated` DESC
+LIMIT @__p_0" (0723d8ff)
+2019-06-16T14:05:12.9540270+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T14:05:13.0200307+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T14:05:13.0280312+07:00 0HLNI53SLA4FR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`Name`, `x`.`Status`, `x`.`Value1`, `x`.`Value2`, `x`.`Value3`, `x`.`Value4`, `x`.`Value5`
+FROM `SystemConfigs` AS `x`
+WHERE `x`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2019-06-16T14:05:13.0420320+07:00 0HLNI53SLA4FR:00000001 [INF] Executed action method "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 790.8934ms. (50a9e262)
+2019-06-16T14:05:13.1420377+07:00 0HLNI53SLA4FR:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2019-06-16T14:05:13.4040527+07:00 0HLNI53SLA4FR:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 1221.9411ms (afa2e885)
+2019-06-16T14:05:13.4070529+07:00 0HLNI53SLA4FR:00000001 [INF] Executed endpoint '"TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)"' (99874f2b)
+2019-06-16T14:05:13.4870574+07:00 0HLNI53SLA4FR:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in D:\TeduCoreAppMySql\TeduCoreApp\TeduCoreApp\Views\Home\Index.cshtml:line 47
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-16T14:05:13.7080701+07:00 0HLNI53SLA4FR:00000001 [INF] Request finished in 1935.7398ms 500 text/html; charset=utf-8 (791a596a)
