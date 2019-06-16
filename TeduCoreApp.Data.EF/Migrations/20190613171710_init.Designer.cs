@@ -9,7 +9,7 @@ using TeduCoreApp.Data.EF;
 namespace TeduCoreApp.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20190613131403_init")]
+    [Migration("20190613171710_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
